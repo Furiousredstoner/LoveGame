@@ -2,6 +2,8 @@ function KeyboardInput(Input)
  Input = tostring(Input)
  if love.keyboard.isDown(Input) then 
   return true 
+ else
+    return false
  end
 end
 
@@ -26,19 +28,4 @@ function Timer(Delay)
             return true 
         end
     end
-end
-
-function Animation(Action , Timer , Frames , CurrentFrame , FPS, Sprite , Entity)
- Action = tostring(Action)
- Timer = Timer + 1
- if Timer == FPS then 
-  Timer = 0 
-  CurrentFrame = CurrentFrame + 1
- end
- if CurrentFrame > Frames then 
-  CurrentFrame = 1
- end
- if Action == "Run" then 
- Sprite = Entity.Sprites.Run[CurrentFrame]
- end
 end

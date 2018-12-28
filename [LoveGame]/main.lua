@@ -64,7 +64,9 @@ end
   Player.X = Player.X + Player.SpeedX*dt
  else 
     Player.Moving = false 
+      if not Player.Jump then
     Player.Sprite = Player.Sprites.Idle[1]
+    end
  end
 
  if KeyboardInput("d") then -- when (d) is hit
@@ -89,7 +91,9 @@ end
   Player.X = Player.X - Player.SpeedX*dt
  else 
     Player.Moving = false 
+       if not Player.Jump then
     Player.Sprite = Player.Sprites.Idle[1]
+    end
  end
 
  if KeyboardInput("space") and Player.Jump == false then 

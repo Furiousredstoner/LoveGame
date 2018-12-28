@@ -101,7 +101,7 @@ end
   Player.Jump = true -- Blocks the next jump 
   Player.Sprite = Player.Sprites.Jump[1]
   Player.Velocity = -45 -- Player jumps up
-  --SoundEffect("Jump.wav")
+  SoundEffect("Jump.wav")
  end
 
  Player.Velocity = Player.Velocity + Player.Gravity*dt -- (Velocity + Gravity)

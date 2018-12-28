@@ -25,7 +25,7 @@ function love.load() -- What LOVE loads on startup (Runs only once)
  Player.Sprites.Idle = {love.graphics.newImage("Sprite.PNG")} --Idle
  Player.Sprites.Jump = {love.graphics.newImage('SpriteJump.PNG')} -- Jumping
  Player.Sprites.Run = {love.graphics.newImage("SpriteRun.PNG"), love.graphics.newImage("SpriteRun2.PNG"), love.graphics.newImage("SpriteRun3.PNG")}
- Music("Steam Gardens.wav")
+ --Music("Steam Gardens.wav")
  Player.Sprite = Player.Sprites.Idle[1]
 end
     
@@ -101,7 +101,7 @@ end
   Player.Jump = true -- Blocks the next jump 
   Player.Sprite = Player.Sprites.Jump[1]
   Player.Velocity = -45 -- Player jumps up
-  SoundEffect("Jump.wav")
+  --SoundEffect("Jump.wav")
  end
 
  Player.Velocity = Player.Velocity + Player.Gravity*dt -- (Velocity + Gravity)
